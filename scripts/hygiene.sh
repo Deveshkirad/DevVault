@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Repository hygiene check (M1). Runs on every push.
 # This is a helper so you can see problems yourself without waiting for grading.
-set -euo pipefail
+set -u
+set -o pipefail
 fail=0
 err() { echo "FAIL: $1"; fail=1; }
 ok()  { echo "  ok: $1"; }
